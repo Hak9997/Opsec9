@@ -29,6 +29,7 @@ up=$(uptime -p | cut -c4-)
 since=$(uptime -s)
 mac=$(macchanger --show wlan0)
 clear
+if [ "$EUID" -eq 0 ]; then echo "You are root"; else echo "You are not root"; fi
 echo -e "\033[31m─────────────────────────────────────────────────────────────\033[0m"
 echo "                                    ________ "
 echo "    ____ ______  ______ ____   ____/   __   \ "
