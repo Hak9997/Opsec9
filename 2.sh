@@ -89,7 +89,7 @@ termux-setup-storage
 clear
 echo "storage mounted" 
 rm /data/data/com.termux/files/usr/etc/bash.bashrc
-mv /data/data/com.termux/files/home/opsec9/bash.bashrc /data/data/com.termux/files/usr/etc/
+mv /data/data/com.termux/files/home/Opsec9/bash.bashrc /data/data/com.termux/files/usr/etc/
 pip install -r /data/data/com.termux/files/home/opsec9/OSIF/requirements.txt
 cd /data/data/com.termux/files/home/opsec9/pyshell
 pip2 install pyscreenshot
