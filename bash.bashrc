@@ -29,7 +29,7 @@ up=$(uptime -p | cut -c4-)
 since=$(uptime -s)
 mac=$(macchanger --show wlan0)
 clear
-if [ "$EUID" -eq 0 ]; then echo "\033[32m☢You are root☢\033[0m"; else echo "\033[31mYou are not root, some tools need root to be at full potential\033[0m"; fi
+if [ "$EUID" -eq 0 ]; then echo " \033[32m ☢You are root☢ \033[0m "; else echo "\033[31mYou are not root, some tools need root to be at full potential \033[0m"; fi
 echo -e "\033[31m╔══════════════════════════════════════════╗\033[0m"
 echo "                                    ________ "
 echo "    ____ ______  ______ ____   ____/   __   \ "
