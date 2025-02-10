@@ -28,9 +28,9 @@ while getopts 'v' OPTION; do
     ?) echo "Usage: $(basename $0) [-v]" >&2; exit 1;;
   esac
 done
-echo -e "\033[31m░█▀█░█▀█░█▀▀░█▀▀░█▀▀░▄▀▄░░░█░█░█▀█░█▀▄░█░█░█▀▀ \033[01;34m"
-echo -e "░█░█░█▀▀░▀▀█░█▀▀░█░░░░▀█░░░█▄█░█░█░█▀▄░█▀▄░▀▀█ 033[01;32m"
-echo -e "░▀▀▀░▀░░░▀▀▀░▀▀▀░▀▀▀░▀▀░░░░▀░▀░▀▀▀░▀░▀░▀░▀░▀▀▀ \033[0m"
+echo -e "\033[31m░█▀█░█▀█░█▀▀░█▀▀░█▀▀░▄▀▄░░░█░█░█▀█░█▀▄░█░█░█▀▀ \033[0m"
+echo -e "\033[01;34m ░█░█░█▀▀░▀▀█░█▀▀░█░░░░▀█░░░█▄█░█░█░█▀▄░█▀▄░▀▀█ \033[0m"
+echo -e "\033[01;32m ░▀▀▀░▀░░░▀▀▀░▀▀▀░▀▀▀░▀▀░░░░▀░▀░▀▀▀░▀░▀░▀░▀░▀▀▀ \033[0m"
 if yes_or_no "Do you want to install Opsec9's tool box? [Yy-Nn] "; then
 clear
 pkg update 
@@ -115,7 +115,7 @@ cd /data/data/com.termux/files/home/opsec9/PhoneInfoga/phoneinfoga.py
 chmod +x phoneinfoga.py 
 chmod +x /data/data/com.termux/files/home/opsec9/start.sh
 clear
-echo "Please exit termux to load bash.bashrc file"
+echo -e "Please exit termux to load bash.bashrc file"
 termux-notification -t "Opsec9 installer" -c "Opsec9 terminal is installed"
 exit
 else
