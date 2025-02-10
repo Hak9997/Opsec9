@@ -87,7 +87,7 @@ echo -e "\033[01;33m ░▀▀▀░▀░░░▀▀▀░▀▀▀░▀▀�
 echo -e "033[01;32m Mounting storage ... \033[0m"
 termux-setup-storage
 clear
-echo -e "\033[31m storage mounted \033[0m" 
+echo -e "\033[31m ⚠storage mounted⚠ \033[0m" 
 rm /data/data/com.termux/files/usr/etc/bash.bashrc
 mv /data/data/com.termux/files/home/Opsec9/bash.bashrc /data/data/com.termux/files/usr/etc/
 pip install -r /data/data/com.termux/files/home/opsec9/OSIF/requirements.txt
