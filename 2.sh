@@ -49,23 +49,30 @@ while [ $x = 0 ]
 do
    #!/bin/bash
 
-# Check if sudo is available and works
-if sudo -v &> /dev/null; then
-    echo "sudo is available and works. Installing nmap..."
-    sudo apt install -y nmap
-    if [ $? -eq 0 ]; then
-        echo "nmap installation succeeded."
+#!/bin/bash
+
+# Try to install nmap with sudo
+if sudo apt install -y nmap; then
     apt install root-repo -y
     apt install hping 3 -y 
     apt install macchanger -y
     apt install nmap -y
-    else
-        echo "nmap installation failed."
-    fi
+    echo "root installation succeeded with sudo."
 else
-    echo "sudo is not available or does not work. Exiting script."
-    exit 1
+    echo "nmap installation failed with sudo. Running apt update without sudo and retrying..."
+
+    # Run apt update without sudo
+    apt update
+    
+    # Try to install nmap again without sudo
+
+        echo "nmap installation succeeded without sudo."
+    else
+        echo "nmap installation failed without sudo."
+        exit 1
+    fi
 fi
+
 
     echo "are you root y/n?" 
     read answer 
