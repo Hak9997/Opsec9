@@ -68,10 +68,8 @@ else
 
         echo "nmap installation succeeded without sudo."
     else
-        echo "nmap installation failed without sudo."
         exit 1
     fi
-fi
 
 
     echo "are you root y/n?" 
