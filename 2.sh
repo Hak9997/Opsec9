@@ -47,12 +47,10 @@ echo "░▀▀▀░▀░░░▀▀▀░▀▀▀░▀▀▀░▀▀░�
 x=0
 while [ $x = 0 ]
 do
-   #!/bin/bash
 
-#!/bin/bash
-
+pkg install tsu -y
 # Try to install nmap with sudo
-if sudo apt install -y nmap; then
+if sudo apt update; then
     apt install root-repo -y
     apt install hping 3 -y 
     apt install macchanger -y
