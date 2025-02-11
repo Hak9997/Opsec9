@@ -44,11 +44,7 @@ clear
 echo "░█▀█░█▀█░█▀▀░█▀▀░█▀▀░▄▀▄░░░█░█░█▀█░█▀▄░█░█░█▀▀"
 echo "░█░█░█▀▀░▀▀█░█▀▀░█░░░░▀█░░░█▄█░█░█░█▀▄░█▀▄░▀▀█"
 echo "░▀▀▀░▀░░░▀▀▀░▀▀▀░▀▀▀░▀▀░░░░▀░▀░▀▀▀░▀░▀░▀░▀░▀▀▀"
-x=0
-while [ $x = 0 ]
-do
 
-pkg install tsu -y
 # Try to install nmap with sudo
 if sudo ping -c 1 google.com; then
     apt install root-repo -y
@@ -119,5 +115,5 @@ chmod +x /data/data/com.termux/files/home/opsec9/start.sh
 clear
 echo -e "Please exit termux to load bash.bashrc file"
 termux-notification -t "Opsec9 installer" -c "Opsec9 terminal is installed"
-fi
 exit
+fi
