@@ -68,24 +68,6 @@ else
         exit 1
     fi
 
-
-    echo "are you root y/n?" 
-    read answer 
-case "$answer" in
-    y)
-    pkg install tsu
-    apt install root-repo -y
-    apt install hping 3 -y 
-    apt install macchanger -y
-    apt install nmap -y
-    x=1
-    ;;
-    n)
-    echo okay
-    x=1
-    ;;
-esac
-done
 clear
 echo -e "\033[31m ░█▀█░█▀█░█▀▀░█▀▀░█▀▀░▄▀▄░░░█░█░█▀█░█▀▄░█░█░█▀▀ \033[0m"
 echo -e "\033[31m ░█░█░█▀▀░▀▀█░█▀▀░█░░░░▀█░░░█▄█░█░█░█▀▄░█▀▄░▀▀█ \033[0m"
