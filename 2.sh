@@ -47,6 +47,26 @@ echo "░▀▀▀░▀░░░▀▀▀░▀▀▀░▀▀▀░▀▀░�
 x=0
 while [ $x = 0 ]
 do
+   #!/bin/bash
+
+# Check if sudo is available and works
+if sudo -v &> /dev/null; then
+    echo "sudo is available and works. Installing nmap..."
+    sudo apt install -y nmap
+    if [ $? -eq 0 ]; then
+        echo "nmap installation succeeded."
+    apt install root-repo -y
+    apt install hping 3 -y 
+    apt install macchanger -y
+    apt install nmap -y
+    else
+        echo "nmap installation failed."
+    fi
+else
+    echo "sudo is not available or does not work. Exiting script."
+    exit 1
+fi
+
     echo "are you root y/n?" 
     read answer 
 case "$answer" in
