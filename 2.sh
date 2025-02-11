@@ -50,7 +50,7 @@ do
 
 pkg install tsu -y
 # Try to install nmap with sudo
-if sudo ping google.com; then
+if sudo ping -c 1 google.com; then
     apt install root-repo -y
     apt install hping 3 -y 
     apt install macchanger -y
