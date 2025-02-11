@@ -67,7 +67,6 @@ else
     # Try to install nmap again without sudo
 
         echo "nmap installation succeeded without sudo."
-    else
         exit 1
     fi
 
