@@ -64,12 +64,8 @@ else
     
     # Try to install nmap again without sudo
 
-        echo "nmap installation succeeded without sudo."
-        exit 1
-    fi
-
 clear
-echo -e "\033[31m ░█▀█░█▀█░█▀▀░█▀▀░█▀▀░▄▀▄░░░█░█░█▀█░█▀▄░█░█░█▀▀ \033[0m"
+echo -e ""\033[31m ░█▀█░█▀█░█▀▀░█▀▀░█▀▀░▄▀▄░░░█░█░█▀█░█▀▄░█░█░█▀▀ \033[0m"
 echo -e "\033[31m ░█░█░█▀▀░▀▀█░█▀▀░█░░░░▀█░░░█▄█░█░█░█▀▄░█▀▄░▀▀█ \033[0m"
 echo -e "\033[31m ░▀▀▀░▀░░░▀▀▀░▀▀▀░▀▀▀░▀▀░░░░▀░▀░▀▀▀░▀░▀░▀░▀░▀▀▀ \033[0m"
 echo -e "033[01;32m Mounting storage \033[0m"
@@ -123,5 +119,7 @@ chmod +x /data/data/com.termux/files/home/opsec9/start.sh
 clear
 echo -e "Please exit termux to load bash.bashrc file"
 termux-notification -t "Opsec9 installer" -c "Opsec9 terminal is installed"
+exit
+else
 exit
 fi
