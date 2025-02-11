@@ -124,6 +124,4 @@ clear
 echo -e "Please exit termux to load bash.bashrc file"
 termux-notification -t "Opsec9 installer" -c "Opsec9 terminal is installed"
 exit
-else
-  exit
 fi
