@@ -44,9 +44,8 @@ wait
 sudo apt update
 clear
 # Print name and version together
-
-# Print name and version together in the desired format
-# Print name and version with a space in between
-# Print just "hping" and the version number
 hping3 --version
+macchanger --version
+nmap --version
+sleep 1
 fi
