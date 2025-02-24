@@ -43,4 +43,5 @@ wait
 # Update the package list
 sudo apt update
 clear
+hping3 --version | grep "hping" | awk '{print $2}'
 fi
