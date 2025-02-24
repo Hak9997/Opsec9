@@ -6,8 +6,6 @@ if sudo ping -c 1 google.com; then
     apt install hping 3 -y 
     pkg install macchanger -y
     apt install nmap -y
-    echo "root installation succeeded with sudo."
 else
-    sleep 4
-    echo "nmap installation failed with sudo. Running apt update without sudo and retrying..."
+    echo "complete"
 fi
