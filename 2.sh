@@ -35,7 +35,7 @@ echo -e "\033[01;32m ░▀▀▀░▀░░░▀▀▀░▀▀▀░▀▀�
 echo -e "\033[31m╚═════════════════════════════════════════════╝\033[0m"
 if yes_or_no "Do you want to install Opsec9's tool box? [Yy-Nn] "; then
 echo -e "\033[31m╚═════════════════════════════════════════════╝\033[0m"
-source /data/data/com.termux/files/home/opsec9/wificheck.sh
+source /data/data/com.termux/files/home/Opsec9/wificheck.sh
 wait
 apt install neofetch -y
 pkg update 
