@@ -46,6 +46,8 @@ clear
 # Print name and version together
 
 # Print name and version together in the desired format
-hping3 --version | grep "hping" | awk '{print $1 $2}'
+# Print name and version with a space in between
+hping3 --version | grep "hping" | awk '{print $1 " " $2}'
+
 
 fi
