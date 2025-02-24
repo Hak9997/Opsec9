@@ -7,6 +7,5 @@ if sudo ping -c 1 google.com; then
     pkg install macchanger -y
     apt install nmap -y
 else
-    echo "you are not root "
     sleep 1
 fi
