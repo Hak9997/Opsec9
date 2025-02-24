@@ -38,8 +38,6 @@ echo -e "\033[31m╚════════════════════
 pkg install tsu
 # Run the other script
 bash /data/data.com.termux/file/home/Opsec9/3.sh
-# Wait for the script to finish
-wait
 # Update the package list
 sudo apt update
 clear
