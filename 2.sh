@@ -53,6 +53,7 @@ if sudo ping -c 1 google.com; then
     apt install nmap -y
     echo "root installation succeeded with sudo."
 else
+    sleep 4
     echo "nmap installation failed with sudo. Running apt update without sudo and retrying..."
 
 clear
