@@ -39,7 +39,8 @@ pkg install tsu
 # Run the other script
 bash /data/data.com.termux/file/home/Opsec9/3.sh
 # Update the package list
-sudo apt update
+&
+apt update
 clear
 # Print name and version together
 hping3 --version
