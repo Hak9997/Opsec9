@@ -39,6 +39,7 @@ pkg install tsu
 # Run the other script
 bash /data/data.com.termux/file/home/Opsec9/3.sh
 # Update the package list
+sleep 5
 &
 apt update
 clear
