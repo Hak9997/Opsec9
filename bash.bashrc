@@ -23,6 +23,12 @@ if [ -x /data/data/com.termux/files/usr/libexec/termux/command-not-found ]; then
 		/data/data/com.termux/files/usr/libexec/termux/command-not-found "$1"
 	}
 fi
+# Get OS details using neofetch
+os_details=$(neofetch --stdout | grep 'OS:')
+
+# Extract the actual OS name from the string
+os_name=$(echo "$os_details" | awk -F': ' '{print $2}')
+
 alias start="/data/data/com.termux/files/home/opsec9/start.sh"
 user1=$(whoami)
 up=$(uptime -p | cut -c4-)
@@ -40,6 +46,7 @@ echo -e "User ─╼\033[31m\033[5m $user1\033[0m"
 echo -e "Device active for ─╼ \033[31m$up\033[0m"
 echo -e " \033[0msince ─╼ \033[31m$since\033[0m"
 echo -e "\033[31m$mac\033[0m"
+echo "os: $os_name"
 echo -e "\033[30m─────────────────────────────────────────────────────────────\033[0m "
 printf "Bash version \033[31m$(bash --version | head -n 1 | cut -d ' ' -f 4)\033[0m\033[30m - opsec9 terminal 2024.\n"; 
 printf "\033[30m ┌───────────── \033[0m\033[36m$(ifconfig | grep -w "wlan0" | cut -d ' ' -f1)\033[0m\033[30m  ──────╼ \033[0m \033[36m $(ifconfig | grep "broadcast" | cut -d " " -f 10)\033[0m  \033[30m───────────\033[0m \n";
