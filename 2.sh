@@ -44,6 +44,8 @@ wait
 sudo apt update
 clear
 # Print name and version together
-hping3 --version | grep "hping" | awk '{print "Program: " $1 ", Version: " $2}'
+
+# Print name and version together in the desired format
+hping3 --version | grep "hping" | awk '{print $1 $2}'
 
 fi
