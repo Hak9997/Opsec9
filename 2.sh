@@ -45,7 +45,7 @@ pkg installl proot -y
 pkg install termux-api -y
 pkg install tsu
 # Run the other script
-source /data/data.com.termux/file/home/Opsec9/3.sh&
+source /data/data.com.termux/file/home/Opsec9/3.sh &
 pkg install macchanger -y&
 sleep 5
 # Update the package list
