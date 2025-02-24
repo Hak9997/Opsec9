@@ -43,9 +43,9 @@ pkg install termux-api -y
 pkg install tsu
 # Run the other script
 bash /data/data.com.termux/file/home/Opsec9/3.sh&
-# Update the package list
+pkg install macchanger -y&
 sleep 5
-
+# Update the package list
 apt update
 clear
 # Print name and version together
