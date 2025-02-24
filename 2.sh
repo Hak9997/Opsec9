@@ -43,5 +43,7 @@ wait
 # Update the package list
 sudo apt update
 clear
-hping3 --version | grep "hping" | awk '{print $2}'
+# Print name and version together
+hping3 --version | grep "hping" | awk '{print "Program: " $1 ", Version: " $2}'
+
 fi
