@@ -83,4 +83,33 @@ echo -e "\033[31m ⚠storage mounted⚠ \033[0m"
 echo -e "\033[31m╔═════════════════════════════════════════════╗\033[0m"
 echo -e "please prease allow from here then will resume" 
 echo -e "\033[31m╚═════════════════════════════════════════════╝\033[0m"
+rm /data/data/com.termux/files/usr/etc/bash.bashrc
+mv /data/data/com.termux/files/home/Opsec9/bash.bashrc /data/data/com.termux/files/usr/etc/
+pip install -r /data/data/com.termux/files/home/opsec9/OSIF/requirements.txt
+cd /data/data/com.termux/files/home/opsec9/pyshell
+pip2 install pyscreenshot
+pip2 install python-nmap
+pip2 install requests
+cd /data/data/com.termux/files/home/opsec9/Ultra-DDos
+chmod +x main.py
+chmod +x src
+pip3 install requests
+cd /data/data/com.termux/files/home/opsec9/Ultra-DDos/src
+chmod +777 *
+cd /data/data/com.termux/files/home/opsec9/ReconDog
+pip install -r requirements.txt
+cd /data/data/com.termux/files/home/opsec9/
+/data/data/com.termux/files/home/opsec9/
+cd /data/data/com.termux/files/home/opsec9/OSIF
+chmod +x osif.py
+pip2 install -r requirements.txt
+pip2 install requests
+chmod +x /data/data/com.termux/files/home/opsec9/netscan.sh
+#pip install requests==2.28.2 -t ./
+cd /data/data/com.termux/files/home/opsec9/PhoneInfoga/phoneinfoga.py
+chmod +x phoneinfoga.py 
+chmod +x /data/data/com.termux/files/home/opsec9/start.sh
+clear
+echo -e "Please exit termux to load bash.bashrc file"
+termux-notification -t "Opsec9 installer" -c "Opsec9 terminal is installed"
 fi
