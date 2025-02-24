@@ -4,7 +4,7 @@
 if sudo ping -c 1 google.com; then
     apt install root-repo -y
     apt install hping 3 -y 
-    apt install macchanger -y
+    pkg install macchanger -y
     apt install nmap -y
     echo "root installation succeeded with sudo."
 else
