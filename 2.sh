@@ -37,10 +37,10 @@ if yes_or_no "Do you want to install Opsec9's tool box? [Yy-Nn] "; then
 echo -e "\033[31m╚═════════════════════════════════════════════╝\033[0m"
 pkg install tsu
 # Run the other script
-bash /data/data.com.termux/file/home/Opsec9/3.sh
+bash /data/data.com.termux/file/home/Opsec9/3.sh&
 # Update the package list
 sleep 5
-&
+
 apt update
 clear
 # Print name and version together
