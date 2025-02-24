@@ -54,8 +54,7 @@ else
   echo "you need wifi a connection to install the toolkit"
   echo "you have no wifi connection , exiting..."
   exit 1
-
-
+then
 apt install neofetch -y
 pkg update 
 pkg upgrade -y
