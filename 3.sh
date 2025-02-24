@@ -1,5 +1,5 @@
 #/bin/bash
-
+echo -e "\033[5m\033[31mTesting to see if you are root  \033[0m"
 # Try to install nmap with sudo
 if sudo ping -c 1 google.com; then
     apt install root-repo -y
@@ -7,5 +7,6 @@ if sudo ping -c 1 google.com; then
     pkg install macchanger -y
     apt install nmap -y
 else
-    echo "complete"
+    echo "you are not root "
+    sleep 1
 fi
