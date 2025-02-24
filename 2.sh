@@ -55,11 +55,6 @@ if sudo ping -c 1 google.com; then
 else
     echo "nmap installation failed with sudo. Running apt update without sudo and retrying..."
 
-    # Run apt update without sudo
-    apt update
-    
-    # Try to install nmap again without sudo
-
 clear
 echo -e "\033[31m ░█▀█░█▀█░█▀▀░█▀▀░█▀▀░▄▀▄░░░█░█░█▀█░█▀▄░█░█░█▀▀ \033[0m"
 echo -e "\033[31m ░█░█░█▀▀░▀▀█░█▀▀░█░░░░▀█░░░█▄█░█░█░█▀▄░█▀▄░▀▀█ \033[0m"
