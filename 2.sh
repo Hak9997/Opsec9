@@ -55,7 +55,6 @@ if sudo ping -c 1 google.com; then
 else
     sleep 4
     echo "nmap installation failed with sudo. Running apt update without sudo and retrying..."
-done
 clear
 echo -e "\033[31m ░█▀█░█▀█░█▀▀░█▀▀░█▀▀░▄▀▄░░░█░█░█▀█░█▀▄░█░█░█▀▀ \033[0m"
 echo -e "\033[31m ░█░█░█▀▀░▀▀█░█▀▀░█░░░░▀█░░░█▄█░█░█░█▀▄░█▀▄░▀▀█ \033[0m"
