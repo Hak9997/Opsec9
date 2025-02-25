@@ -47,6 +47,6 @@ echo -e "Device active for ─╼ \033[31m$up\033[0m"
 echo -e "\033[0msince ─╼ \033[31m$since\033[0m"
 echo -e "\033[32m$mac\033[0m"
 echo "os: $os_name"
-printf "Bash version \033[31m$(bash --version | head -n 1 | cut -d ' ' -f 4)\033[0m" echo \033[30m - opsec9 terminal 2024.\n"; 
+printf "Bash version \033[31m$(bash --version | head -n 1 | cut -d ' ' -f 4)\033[0m" echo "\033[30m - opsec9 terminal 2024.\n"; 
 printf "\033[0m\033[36m$(ifconfig | grep -w "wlan0" | cut -d ' ' -f1)\033[0m\033[30m  "╼" \033[0m \033[36m $(ifconfig | grep "broadcast" | cut -d " " -f 10)\033[0m  \n";
 echo -e "\033[31m╚═════════════════════════════════════════════╝\033[0m"
