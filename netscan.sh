@@ -48,6 +48,8 @@ if yes_or_no "Do you want to scan the network"; then
 interface=$(ip route | grep default | awk '{print $5}')
 ip_address=$(ip addr show $interface | grep "inet\b" | awk '{print $2}' | cut -d/ -f1)
 # Scan the network for all devices
+echo -e "\033[31m╔═════════════════════════════════════════════╗\033[0m"
+
 echo -e "\033[30m─────────────────────────────────────────────────────────────\033[0m "
 sudo nmap -sn $ip_address/24
 echo -e "\033[30m─────────────────────────────────────────────────────────────\033[0m "
