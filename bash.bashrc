@@ -33,7 +33,7 @@ alias start="/data/data/com.termux/files/home/opsec9/start.sh"
 user1=$(whoami)
 up=$(uptime -p | cut -c4-)
 since=$(uptime -s)
-mac=$(macchanger --show wlan0)
+mac=$(sudo macchanger --show wlan0)
 clear
 echo -e "\033[31m╔═════════════════════════════════════════════╗\033[0m"
 if [ "$EUID" -eq 0 ]; then echo -e " \033[32m ☢You are root☢ \033[0m "; else echo -e "\033[31m You are not root, some tools need root to be at full potential ⚠\033[0m"; fi
@@ -47,6 +47,6 @@ echo -e "Device active for ─╼ \033[31m$up\033[0m"
 echo -e "\033[0msince ─╼ \033[31m$since\033[0m"
 echo -e "\033[32m$mac\033[0m"
 echo "os: $os_name"
-printf "Bash version \033[31m$(bash --version | head -n 1 | cut -d ' ' -f 4)\033[0m\033[30m - opsec9 terminal 2024.\n"; 
-printf " \033[0m\033[36m$(ifconfig | grep -w "wlan0" | cut -d ' ' -f1)\033[0m\033[30m  "╼" \033[0m \033[36m $(ifconfig | grep "broadcast" | cut -d " " -f 10)\033[0m  \n";
+printf "Bash version \033[31m$(bash --version | head -n 1 | cut -d ' ' -f 4)\033[0m" echo \033[30m - opsec9 terminal 2024.\n"; 
+printf "\033[0m\033[36m$(ifconfig | grep -w "wlan0" | cut -d ' ' -f1)\033[0m\033[30m  "╼" \033[0m \033[36m $(ifconfig | grep "broadcast" | cut -d " " -f 10)\033[0m  \n";
 echo -e "\033[31m╚═════════════════════════════════════════════╝\033[0m"
