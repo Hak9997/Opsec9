@@ -110,8 +110,9 @@ pip2 install -r requirements.txt
 pip2 install requests
 chmod +x /data/data/com.termux/files/home/opsec9/netscan.sh
 #pip install requests==2.28.2 -t ./
-cd /data/data/com.termux/files/home/opsec9/PhoneInfoga/phoneinfoga.py
-chmod +x phoneinfoga.py 
+cd /data/data/com.termux/files/home/opsec9/pi/phoneinfoga.py
+chmod +x *
+pip install -r requirements.txt
 chmod +x /data/data/com.termux/files/home/opsec9/start.sh
 clear
 echo -e "Please exit termux to load bash.bashrc file"
