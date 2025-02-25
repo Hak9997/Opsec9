@@ -49,4 +49,4 @@ echo -e "\033[31m$mac\033[0m"
 echo "os: $os_name"
 echo -e "\033[30m─────────────────────────────────────────────────────────────\033[0m "
 printf "Bash version \033[31m$(bash --version | head -n 1 | cut -d ' ' -f 4)\033[0m\033[30m - opsec9 terminal 2024.\n"; 
-printf "\033[30m "╔══════════════" \033[0m\033[36m$(ifconfig | grep -w "wlan0" | cut -d ' ' -f1)\033[0m\033[30m  ╼ \033[0m \033[36m $(ifconfig | grep "broadcast" | cut -d " " -f 10)\033[0m  \033[30m "═════╗" \033[0m \n";
+printf " \033[0m\033[36m$(ifconfig | grep -w "wlan0" | cut -d ' ' -f1)\033[0m\033[30m  "╼" \033[0m \033[36m $(ifconfig | grep "broadcast" | cut -d " " -f 10)\033[0m  \n";
