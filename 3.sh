@@ -8,6 +8,8 @@ if sudo ping -c 1 google.com; then
     apt install hping 3 -y 
     pkg install macchanger -y
     apt install nmap -y
+termux-toast -b red -c blue -g top "Root is installed on this device"
 else
+termux-toast -b red -c blue -g top "Root is not installed on this device"
     sleep 1
 fi
