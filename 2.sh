@@ -115,6 +115,13 @@ chmod +x *
 pip install -r requirements.txt
 chmod +x /data/data/com.termux/files/home/opsec9/start.sh
 clear
-echo -e "Please exit termux to load bash.bashrc file"
 termux-notification -t "Opsec9 installer" -c "Opsec9 terminal is installed"
+# Simulate typing "exit" letter by letter
+for char in e x i t; do
+  echo -n "$char"  # Print each character without a newline
+  sleep 0.5        # Pause for half a second between each letter
+done
+echo                # Move to a new line after "exit"
+sleep 1             # Wait for a moment before exiting
+exit                # Exit the terminal
 fi
