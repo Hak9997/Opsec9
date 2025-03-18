@@ -12,8 +12,8 @@ if sudo ping -c 1 www.google.com >/dev/null 2>&1; then
     apt install hping 3 -y 
     pkg install macchanger -y
    apt install nmap -y
-    termux-toast -b red -c blue -g top "Root is installed on this device"
+    termux-toast -b "#FF0000" -c blue -g top "Root is installed on this device"
 else
     # Show a toast message in Termux
-    termux-toast "Root is not installed on this device"
+    termux-toast -b "#FF0000" -c blue -g top "Root is not installed on this device"
 fi
