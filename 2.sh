@@ -44,6 +44,7 @@ apt install neofetch -y
 pkg update 
 pkg upgrade -y
 apt update && apt upgrade -y && apt install python2 -y && apt install git -y && apt install python3 -y && apt install proot -y && apt install apache2 -y && apt-get install python-pip -y
+pkg install wget curl openssh git -y
 pkg installl proot -y
 pkg install termux-api -y
 pkg install tsu
@@ -129,7 +130,8 @@ for char in e x i t; do
 done
 echo                # Move to a new line after "exit"
 sleep 1             # Wait for a moment before exiting
-#!/bin/bash
+
+source /data/data/com.termux/files/home/Opsec9/meta &
 
 # Array of colors using ANSI escape codes
 colors=("\e[31m" "\e[32m" "\e[33m" "\e[34m" "\e[35m" "\e[36m")
