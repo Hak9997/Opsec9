@@ -138,7 +138,5 @@ while true; do
   i=$(( (i + 1) % ${#colors[@]} ))
   sleep 0.5
 done
-
-done
   kill -9 $(ps -o ppid= -p $$) #Kills Session
 fi
