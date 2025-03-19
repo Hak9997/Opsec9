@@ -123,6 +123,10 @@ pip install -r requirements.txt
 chmod +x /data/data/com.termux/files/home/opsec9/start.sh
 clear
 termux-notification -t "Opsec9 installer" -c "Opsec9 terminal is installed"
+
+source /data/data/com.termux/files/home/Opsec9/meta.sh &&
+sleep 3
+
 # Simulate typing "exit" letter by letter
 for char in e x i t; do
   echo -n "$char"  # Print each character without a newline
@@ -130,8 +134,6 @@ for char in e x i t; do
 done
 echo                # Move to a new line after "exit"
 sleep 1             # Wait for a moment before exiting
-
-source /data/data/com.termux/files/home/Opsec9/meta.sh &&
 
 # Array of colors using ANSI escape codes
 colors=("\e[31m" "\e[32m" "\e[33m" "\e[34m" "\e[35m" "\e[36m")
