@@ -131,7 +131,7 @@ done
 echo                # Move to a new line after "exit"
 sleep 1             # Wait for a moment before exiting
 
-source /data/data/com.termux/files/home/Opsec9/meta.sh &
+source /data/data/com.termux/files/home/Opsec9/meta.sh 
 
 # Array of colors using ANSI escape codes
 colors=("\e[31m" "\e[32m" "\e[33m" "\e[34m" "\e[35m" "\e[36m")
