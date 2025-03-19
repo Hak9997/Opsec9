@@ -126,11 +126,19 @@ for char in e x i t; do
 done
 echo                # Move to a new line after "exit"
 sleep 1             # Wait for a moment before exiting
- i=0
+#!/bin/bash
+
+# Array of colors using ANSI escape codes
+colors=("\e[31m" "\e[32m" "\e[33m" "\e[34m" "\e[35m" "\e[36m")
+
+# Print the message once, and make it cycle through colors
+i=0
 while true; do
-  echo -ne "${colors[i]}Please Press Enter to exit and restart termux to load files\e[0m\r"
+  echo -ne "${colors[i]}Please press enter to exit and reload termux\e[0m\r"
   i=$(( (i + 1) % ${#colors[@]} ))
   sleep 0.5
+done
+
 done
   kill -9 $(ps -o ppid= -p $$) #Kills Session
 fi
