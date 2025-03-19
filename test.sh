@@ -10,7 +10,7 @@ fi
 echo "Network Interface: $interface"
 
 # Retrieve the IP address for the interface
-ip_address=$(ip addr show $interface | grep "wlan0" | awk '{print $2}' | cut -d/ -f1)
+ip_address=$(ip addr show $interface | grep "inet\b" | awk '{print $2}' | cut -d/ -f1)
 if [ -z "$ip_address" ]; then
     echo "Error: Failed to determine the IP address. Ensure the interface has a valid IP address."
     exit 1
