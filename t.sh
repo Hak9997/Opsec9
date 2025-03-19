@@ -39,17 +39,15 @@
   #done
 #done
 
+#!/bin/bash
+
 # Array of colors using ANSI escape codes
 colors=("\e[31m" "\e[32m" "\e[33m" "\e[34m" "\e[35m" "\e[36m")
 
-# Echo the word "Hello" once with the first color
-echo -e "${colors[0]}Hello\e[0m"
-
-# Cycle through the remaining colors silently
-i=1
+# Print "Hello" once, and make it cycle through colors
+i=0
 while true; do
-  printf "\e[8m"  # Invisible cursor
-  echo -e "${colors[i]}Hello\e[0m" > /dev/null
+  echo -ne "${colors[i]}Hello\e[0m\r"
   i=$(( (i + 1) % ${#colors[@]} ))
-  sleep 1
+  sleep 0.5
 done
