@@ -61,7 +61,6 @@ sudo nmap -sn "$ip_address/24" -oG - | awk '/Host:/{print $2, $3}' | column -t -
 wait
 echo -e "\033[30m─────────────────────────────────────────────────────────────\033[0m "&&
 echo -e "\033[31m╔═════════════════════════════════════════════╗\033[0m"&&
-sudo nmap -sn "$ip_address/24" -oG -
 else
   exit
 fi
