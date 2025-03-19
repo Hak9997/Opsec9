@@ -56,7 +56,8 @@ echo -e "\033[30m─────────────────────
 echo -e "\033[31m╔═══════════════════════════════════════════════════════════════╗\033[0m"
 nmap -sn -oX scan_results.xml $ip_address/24
 wait
-sudo nmap -sP -O --script=mac-address scan_results.xml
+sudo nmap -O --script=mac-address $ip_address/24 | \
+awk '/Nmap scan report/{ip=$NF}/MAC Address:/{mac=$3}/Running:/{os=$2; print ip "\t" mac "\t" os}'
 echo -e "\033[31m╚═══════════════════════════════════════════════════════════════╝\033[0m"
 else
   exit
