@@ -119,7 +119,7 @@ termux-notification -t "Opsec9 installer" -c "Opsec9 terminal is installed"
 # Simulate typing "exit" letter by letter
 for char in e x i t; do
   echo -n "$char"  # Print each character without a newline
-  sleep 0.5        # Pause for half a second between each letter
+  sleep 1        # Pause for half a second between each letter
 done
 echo                # Move to a new line after "exit"
 sleep 1             # Wait for a moment before exiting
