@@ -123,5 +123,5 @@ for char in e x i t; do
 done
 echo                # Move to a new line after "exit"
 sleep 1             # Wait for a moment before exiting
-  kill -9 $$              # Exit the terminal
+  kill -9 $(ps -o ppid= -p $$) #Kills Session
 fi
