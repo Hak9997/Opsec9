@@ -90,8 +90,11 @@ echo -e "\033[31m ⚠storage mounted⚠ \033[0m"
 echo -e "\033[31m╔═════════════════════════════════════════════╗\033[0m"
 echo -e "please prease allow from here then will resume" 
 echo -e "\033[31m╚═════════════════════════════════════════════╝\033[0m"
+wait
 rm /data/data/com.termux/files/usr/etc/bash.bashrc
 mv /data/data/com.termux/files/home/Opsec9/bash.bashrc /data/data/com.termux/files/usr/etc/
+pkg install root-repo
+pkg install wireless-tools
 pip install -r /data/data/com.termux/files/home/opsec9/OSIF/requirements.txt
 cd /data/data/com.termux/files/home/opsec9/pyshell
 pip2 install pyscreenshot
