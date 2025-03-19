@@ -1,8 +1,8 @@
 #/bin/bash
-RED='\033
-GRN='\033
-BLUE='\033
-PRPL='\033
+#RED='\033
+#GRN='\033
+#BLUE='\033
+#PRPL='\033
 #gnome-terminal -- bash -c "sudo apt update && sudo apt upgrade -y; exec bash"
 
 function yes_or_no {
