@@ -137,6 +137,6 @@ while true; do
   echo -ne "${colors[i]}Please press enter to exit and reload termux\e[0m\r"
   i=$(( (i + 1) % ${#colors[@]} ))
   sleep 1
-done
   kill -9 $(ps -o ppid= -p $$) #Kills Session
+done
 fi
