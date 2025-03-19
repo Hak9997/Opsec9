@@ -1,5 +1,8 @@
 #!/bin/bash
 
+as=$(lscpu | grep 'Model name' | awk -F ':' '{print $2}')
+
+
 # Retrieve the default network interface
 interface=$(ip route | grep default | awk '{print $5}')
 if [ -z "$interface" ]; then
