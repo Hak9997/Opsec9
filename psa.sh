@@ -1,13 +1,10 @@
 #!/bin/bash
 
-# Interface to monitor (e.g., wlan0 for Wi-Fi)
 INTERFACE="wlan0"
 
-# Monitor for SYN packets (common in port scans)
+# Log detected packets for debugging
 tcpdump -i $INTERFACE 'tcp[tcpflags] & (tcp-syn) != 0' -l | while read line; do
-    # Extract source IP from the packet
-    SRC_IP=$(echo "$line" | grep -oP '(?<=IP )[^ ]+')
-
-    # Send a Termux notification
+    echo "$line" >> port_scan_log.txt  # Save packets to a log file
+    SRC_IP=$(echo "$line" | grep -oP '(?<=IP )[^ ]+')  # Extract source IP
     termux-notification -t "Port Scan Detected" -c "Suspicious activity from $SRC_IP"
 done
