@@ -115,7 +115,6 @@ cd /data/data/com.termux/files/home/opsec9/OSIF
 chmod +x osif.py
 pip2 install -r requirements.txt
 pip2 install requests
-chmod +x /data/data/com.termux/files/home/opsec9/netscan.sh
 #pip install requests==2.28.2 -t ./
 cd /data/data/com.termux/files/home/opsec9/pi/phoneinfoga.py
 chmod +x *
@@ -125,7 +124,6 @@ clear
 termux-notification -t "Opsec9 installer" -c "Opsec9 terminal is installed"
 
 source /data/data/com.termux/files/home/Opsec9/meta.sh &&
-sleep 3
 
 # Simulate typing "exit" letter by letter
 for char in e x i t; do
