@@ -1,18 +1,28 @@
+
 #!/bin/bash
 
+declare -a detected_ips
 log_file="port_scan_log.txt"
 
-# Install inotify-tools if not already installed (required for inotifywait)
-pkg install inotify-tools
+# Process the log file in real-time
+tail -f $log_file | while read line; do
+    SRC_IP=$(echo "$line" | grep -oP '(?<=IP )[^ ]+')
 
-# Monitor the file for updates
-while inotifywait -e modify $log_file; do
-    # Extract the last updated line from the file
-    last_line=$(tail -n 1 $log_file)
+    # Add the IP to an array to track detected IPs
+    detected_ips+=("$SRC_IP")
 
-    # Extract source IP from the line
-    SRC_IP=$(echo "$last_line" | grep -oP '(?<=IP )[^ ]+')
-
-    # Send a single notification
+    # Notify for each IP as it is detected
     termux-notification -t "Port Scan Detected" -c "Suspicious activity from $SRC_IP"
-done
+
+    # Introduce a delay to avoid constant notifications
+    sleep 1
+done &
+
+# After the loop finishes (script interrupted), send a summary notification
+trap "summary_notification" SIGINT
+
+summary_notification() {
+    unique_ips=$(printf "%s\n" "${detected_ips[@]}" | sort | uniq)
+    termux-notification -t "Summary" -c "Total unique IPs detected: $(echo "$unique_ips" | wc -l)"
+    exit 0
+}
