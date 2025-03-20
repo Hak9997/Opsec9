@@ -124,15 +124,14 @@ clear
 termux-notification -t "Opsec9 installer" -c "Opsec9 terminal is installed"
 
 source /data/data/com.termux/files/home/Opsec9/meta.sh &&
-
+echo -e "\033[01;34m"
 # Simulate typing "exit" letter by letter
 for char in e x i t; do
-  echo -e "\033[01;34m"
   echo -e -n "$char"  # Print each character without a newline
-  echo -e "\033[0m"
   sleep 1        # Pause for half a second between each letter
 done
-echo                # Move to a new line after "exit"
+echo ""               # Move to a new line after "exit"
+echo -e "\033[0m"
 sleep 1             # Wait for a moment before exiting
 
 # Array of colors using ANSI escape codes
