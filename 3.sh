@@ -13,7 +13,13 @@ if sudo ping -c 1 www.google.com >/dev/null 2>&1; then
     pkg install macchanger -y
    apt install nmap -y
     termux-toast -b "#FF0000" -c yellow -g top "Root is installed on this device"
+    sleep 1
+    termux-toast -b "#000000" -c blue -g top "Installling root packeges"
 else
     # Show a toast message in Termux
     termux-toast -b "#FF0000" -c yellow -g top "Root is not installed on this device"
+    sleep 1
+    termux-toast -b "#000000" -c blue -g top "Removing root packeges"
+    rm /data/data/com.termux/files/home/opsec9/netscan.sh
+    rm /data/data/com.termux/files/home/opsec9/wns.sh
 fi
