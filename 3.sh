@@ -23,6 +23,6 @@ else
     termux-toast -b "#FF0000" -c yellow -g top "Root is not installed on this device"
     sleep 1
     termux-toast -b "#000000" -c blue -g top "Removing root packeges"
-    rm /data/data/com.termux/files/home/opsec9/netscan.sh
-    rm /data/data/com.termux/files/home/opsec9/wns.sh
+    rm -rf /data/data/com.termux/files/home/opsec9/netscan.sh
+    rm -rf /data/data/com.termux/files/home/opsec9/wns.sh
 fi
