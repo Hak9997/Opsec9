@@ -16,6 +16,7 @@ if sudo ping -c 1 www.google.com >/dev/null 2>&1; then
     sleep 1
     termux-toast -b "#000000" -c blue -g top "Installling root packeges"
     chmod +x /data/data/com.termux/files/home/opsec9/netscan.sh
+    pkg install wireless-tools
 else
     # Show a toast message in Termux
     termux-toast -b "#FF0000" -c yellow -g top "Root is not installed on this device"
