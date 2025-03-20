@@ -127,7 +127,7 @@ source /data/data/com.termux/files/home/Opsec9/meta.sh &&
 
 # Simulate typing "exit" letter by letter
 for char in e x i t; do
-  echo -n "\033[01;34m$char"  # Print each character without a newline
+  echo -n "\033[01;34m$char\033[0m"  # Print each character without a newline
   sleep 1        # Pause for half a second between each letter
 done
 echo                # Move to a new line after "exit"
