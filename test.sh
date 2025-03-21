@@ -5,6 +5,7 @@ INTERFACE="wlan0"
 
 # Log packets for debugging
 tcpdump -i $INTERFACE 'tcp[tcpflags] & (tcp-syn) != 0' -l | while read line; do
+    sudo chmod +x *
     echo "$line" >> port_scan_log.txt  # Save packets for verification
     SRC_IP=$(echo "$line" | grep -oP '(?<=IP )[^ ]+')
     
