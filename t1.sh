@@ -32,4 +32,5 @@ while true; do
 
     # Wait for a few seconds before checking again
     sleep 5
+    sudo bash t1.sh
 done
