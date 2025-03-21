@@ -1,28 +1,27 @@
-
 #!/bin/bash
 
-declare -a detected_ips
 log_file="port_scan_log.txt"
+last_line_count=0
 
-# Process the log file in real-time
-tail -f $log_file | while read line; do
-    SRC_IP=$(echo "$line" | grep -oP '(?<=IP )[^ ]+')
+while true; do
+    # Count the total number of lines in the file
+    current_line_count=$(wc -l < "$log_file")
 
-    # Add the IP to an array to track detected IPs
-    detected_ips+=("$SRC_IP")
+    # Check if the file has been updated
+    if (( current_line_count > last_line_count )); then
+        # Get the new lines added since the last check
+        new_lines=$(tail -n $((current_line_count - last_line_count)) "$log_file")
 
-    # Notify for each IP as it is detected
-    termux-notification -t "Port Scan Detected" -c "Suspicious activity from $SRC_IP"
+        # Extract unique source IPs
+        unique_ips=$(echo "$new_lines" | grep -oP '(?<=IP )[^ ]+' | sort | uniq)
 
-    # Introduce a delay to avoid constant notifications
-    sleep 1
-done &
+        # Send a single notification with the summary
+        termux-notification -t "Port Scan Detected" -c "New activity from: $unique_ips"
 
-# After the loop finishes (script interrupted), send a summary notification
-trap "summary_notification" SIGINT
+        # Update the last line count
+        last_line_count=$current_line_count
+    fi
 
-summary_notification() {
-    unique_ips=$(printf "%s\n" "${detected_ips[@]}" | sort | uniq)
-    termux-notification -t "Summary" -c "Total unique IPs detected: $(echo "$unique_ips" | wc -l)"
-    exit 0
-}
+    # Wait for a few seconds before checking again
+    sleep 5
+done
